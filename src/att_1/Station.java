@@ -1,6 +1,6 @@
 package att_1;
 
-public class Station {
+public abstract class Station implements Interface{
     public String name_station;
     public int awg_workload;
     public String street_location;
@@ -35,8 +35,4 @@ public class Station {
         this.street_location = street_location;
     }
 
-    public void print() {
-        System.out.println("название станции:" + name_station + "\n" + "среднняя нагрузка станции:" + awg_workload + "\n"
-                + "Улица станции:" + street_location + "\n");
-    }
 }

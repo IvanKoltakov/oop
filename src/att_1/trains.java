@@ -1,6 +1,6 @@
 package att_1;
 
-public abstract class trains {
+public abstract class trains implements Interface{
     public int train_number;
     public String line;
     public int wagons_count;

@@ -1,26 +1,22 @@
 package att_1;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Main {
     public static void main(String[] args){
         train_new train = new train_new(5,"северная",12,"есть");
         train_old train_old = new train_old(20,"окружная",17, "нет");
-        train_old.print();
-        train.print();
-        train.setNumber(11);
-        train.setLine("южная");
-        train.setWagonsCount(20);
-        train.getNumber();
-        train.getLine();
-        train.getWagonsCount();
-        Station Station = new Station("ботанический сад",50,"новокузнецкая");
-        Station.print();
-        Schedule Schedule = new Schedule("питерская","12:35",20);
-        Schedule.print();
-        Schedule.setTimeArrival("10:50");
-        Schedule.setNumber(2);
-        Schedule.setNameStation("северная");
-        Schedule.getTimeArrival();
-        Schedule.getNumber();
-        Schedule.getNameStation();
+        train_old train_new = new train_old(22,"окружная",12, "да");
+        station_work station_work = new station_work("арбатская", 20,"восточная", 500);
+
+        List<Interface> list = new ArrayList<>();
+        list.add(station_work);
+        list.add(train_old);
+        list.add(train_new);
+
+        for(Interface i : list){
+            i.print();
+        }
     }
 }

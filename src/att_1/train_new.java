@@ -10,7 +10,7 @@ public class train_new extends trains {
     }
 
     public void print() {
-        System.out.println("Номер поезда: " + train_number + "\n" + "Линия:" + line + "\n"
+        System.out.println("Номер поезда:" + train_number + "\n" + "Линия:" + line + "\n"
                 + "Количество вагонов:" + wagons_count + "\n" + "оплата картой:" + pay_card + "\n");
     }
 }
