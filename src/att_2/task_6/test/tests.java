@@ -11,7 +11,7 @@ import java.util.List;
 
 import att_2.task_6.comparators.*;
 
-public class test {
+public class tests {
     SNILS n1 = new SNILS(12, "12:05:24", "123-456-78-9");
     Patients p1 = new Patients("Димитрий", "камни в почках", n1);
     Patients p2 = new Patients("Добрыня", "синяк под глазом", n1);
@@ -61,16 +61,17 @@ public class test {
     }
     @Test
     public void sortPatientsComparable() {
-        List<Patients> Patients = Arrays.asList(p1,p2,p3,p4,p7,p11,p111);
-        Collections.sort(Patients);
+        List<Patients> Patient = Arrays.asList(p1,p2,p3,p4,p7,p11,p111);
+        Collections.sort(Patient);
         List<Patients> expectedPatients = Arrays.asList(p1, p2, p3, p4, p7, p11, p111);
-        Assertions.assertEquals(Patients, expectedPatients);
+        Assertions.assertEquals(Patient, expectedPatients);
     }
     @Test
     public void sortPatientsComparator01() {
-        List<Patients> Patients = Arrays.asList(p1,p2,p3,p4,p7,p11,p111);
-        Collections.sort(Patients, new NumberComparator().thenComparing(new NameComparator()));
+        List<Patients> Patient = Arrays.asList(p1,p2,p3,p4,p7,p11,p111);
+        Collections.sort(Patient,new NameComparator());
         List<Patients> expectedPatients = Arrays.asList(p1,p2,p3,p4,p7,p11,p111);
-        Assertions.assertEquals(Patients, expectedPatients);
+        Assertions.assertEquals(Patient, expectedPatients);
     }
 }
+
