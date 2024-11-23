@@ -18,5 +18,6 @@ public class Main {
         for(Interface i : list){
             i.print();
         }
+
     }
 }
