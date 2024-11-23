@@ -2,6 +2,7 @@ package att_1;
 
 public class train_new extends trains {
     public String pay_card;
+
     public train_new(int train_number, String line, int wagons_count, String pay_card) {
         this.train_number = train_number;
         this.line = line;
